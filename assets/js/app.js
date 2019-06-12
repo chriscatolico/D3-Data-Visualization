@@ -17,18 +17,13 @@ function makeResponsive() {
     var svgWidth = window.innerWidth;
     var svgHeight = window.innerHeight;    
 
-
-    var svgWidth = window.innerWidth;
-    var svgHeight = window.innerHeight;
-
     // Set svg margins 
-  var margin = {
-    top: 200,
-    bottom: 200,
-    right: 200,
-    left: 200
-  };
-
+    var margin = {
+      top: 200,
+      bottom: 200,
+      right: 200,
+      left: 200
+    };
 
     // Create the width and height based svg margins and parameters to fit chart group within the canvas
     var width = svgWidth - margin.left - margin.right;
@@ -59,7 +54,7 @@ function makeResponsive() {
 
       console.log(stateData);
 
-      //  Create scales
+      // Create scales
       var xLinearScale = d3.scaleLinear()
         .domain([20, d3.max(stateData, d => d.obesity) + 2])
         .range([0, width]);
@@ -133,8 +128,8 @@ function makeResponsive() {
           toolTip.hide(data);
         });
     })
-
 }
+
 // When the browser loads, makeResponsive() is called.
 makeResponsive();
 
